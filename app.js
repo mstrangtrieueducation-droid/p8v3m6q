@@ -859,7 +859,7 @@ function grade() {
 
   scoreValue.textContent = score;
   scoreMessage.textContent = score === 50 ? "Em đã làm đúng toàn bộ bài." : `Em cần chữa ${50 - score} ý. Hãy đọc kỹ giải thích và đối chiếu lại câu gốc.`;
-  answerReview.innerHTML = reviews.map((review) => `<article class="review-card ${review.correct ? "" : "is-wrong"}"><div class="review-head"><h3>Câu ${review.label}</h3><span class="review-status">${review.correct ? "1/1" : "0/1"} điểm</span></div><p class="review-question">${review.question.prompt}</p><div class="review-answer"><span>Em trả lời: <b>${html(review.value || "(trống)")}</b></span><span>Đáp án: <b>${html(review.question.answers[0])}</b></span></div><p class="explanation"><b>Giải thích:</b> ${review.question.explanation}</p></article>`).join("");
+  answerReview.innerHTML = reviews.map((review) => `<article class="review-card ${review.correct ? "" : "is-wrong"}"><div class="review-head"><h3>Câu ${review.label}</h3><span class="review-status">${review.correct ? "1/1" : "0/1"} điểm</span></div><p class="review-question">${review.question.prompt}</p><div class="review-answer"><span>Em trả lời: <b>${html(review.value || "(trống)")}</b></span><span>Đáp án: <b>${html(DiscoverAnswerDisplay.formatAnswer(review.question.answers[0]))}</b></span></div><p class="explanation"><b>Giải thích:</b> ${escapeHtml(DiscoverAnswerDisplay.formatExplanation(review.question.explanation))}</p></article>`).join("");
   results.hidden = false;
   form.hidden = true;
   document.querySelector("#stickyProgress").hidden = true;
