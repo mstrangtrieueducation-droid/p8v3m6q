@@ -102,7 +102,7 @@ const sections = [
       {
         "id": "B5",
         "type": "input",
-        "prompt": "5. c _ _ _ _ l s",
+        "prompt": "5. c _ _ _ _ _ s",
         "answers": [
           "cymbals"
         ],
@@ -474,7 +474,7 @@ const sections = [
       {
         "id": "H1",
         "type": "input",
-        "prompt": "1. c _ _ _ _ _ t",
+        "prompt": "1. c _ _ _ _ _ _",
         "answers": [
           "concert"
         ],
@@ -484,7 +484,7 @@ const sections = [
       {
         "id": "H2",
         "type": "input",
-        "prompt": "2. p _ _ _ _ e",
+        "prompt": "2. p _ _ _ _ _",
         "answers": [
           "parade"
         ],
@@ -494,7 +494,7 @@ const sections = [
       {
         "id": "H3",
         "type": "input",
-        "prompt": "3. p _ _ _ _ t - s _ _ w",
+        "prompt": "3. p _ _ _ _ _ - _ _ _ _",
         "answers": [
           "puppet show",
           "puppet-show"
